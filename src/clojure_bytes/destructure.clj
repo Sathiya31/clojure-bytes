@@ -75,3 +75,16 @@
 
 (let [{{:keys [class weapon]} :joe} multiplayer-game-state]
   (println "Joe is a" class "wielding a" weapon))
+
+;; map can be destructured into map entries
+(def bio  {:name "sathiya" :company "comcast"})
+(into [] bio)
+
+(doseq [xs bio]
+  (println xs))
+
+(doseq [[k v] bio]
+  (println "key: " k " value :" v))
+
+
+
