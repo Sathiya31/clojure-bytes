@@ -49,9 +49,9 @@
 
 ;; extract keys with a name
 (let [{company-name :name
-       location :location
+       address :location
        description :description} client]
-  (println company-name location "-" description))
+  (println company-name address "-" description))
 
 (let [{category :category} client]
   (println category))
@@ -73,11 +73,11 @@
           :weapon "Mystic Staff"
           :score 150}})
 
-(let [{{:keys [class weapon]} :joe} multiplayer-game-state]
+(let [{{:keys [class weapon]} :joe :ryan} multiplayer-game-state]
   (println "Joe is a" class "wielding a" weapon))
 
 ;; map can be destructured into map entries
-(def bio  {:name "sathiya" :company "comcast"})
+(def bio  {:name "sathiya" :company "abc limited"})
 (into [] bio)
 
 (doseq [xs bio]
