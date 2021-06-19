@@ -20,3 +20,9 @@
 ;; practical use of sorted-set
 (apply sorted-set '(1 1 2 3 2 4 5 5))
 ;;=> #{1 2 3 4 5}
+
+;; set can be used to find if a value is available
+(#{"james" "john" "joe"} "joe")
+;;=> "joe"
+(#{"james" "john" "joe"} "jim")
+;;=> nil
